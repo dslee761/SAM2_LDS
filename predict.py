@@ -1,9 +1,9 @@
-import os
-import numpy as np
+# import os
+# import numpy as np
 import torch
-import torchvision
-import matplotlib.pyplot as plt
-from PIL import Image
+# import torchvision
+# import matplotlib.pyplot as plt
+# from PIL import Image
 
 from sam2.build_sam import build_sam2
 from sam2.sam2_image_predictor import SAM2ImagePredictor
@@ -21,10 +21,10 @@ DICT_CONFIG = {
     "sam2_hiera_large": "sam2_hiera_l",
 }
 PATH_WEIGHT = f"/data/weights/{NAME_MODEL}.pt"
-sam2_checkpoint = "../checkpoints/sam2_hiera_large.pt"
+# sam2_checkpoint = "../checkpoints/sam2_hiera_large.pt"
 # model_cfg = "sam2_hiera_l.yaml"
 sam2_model = build_sam2(DICT_CONFIG[NAME_MODEL], PATH_WEIGHT, device=device)
 
 predictor = SAM2ImagePredictor(sam2_model)
 
-
+print(predictor.__dict__)
